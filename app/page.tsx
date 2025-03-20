@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Heart, Star } from "lucide-react"
+import { prefix } from "@/prefix"
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         <div className="w-full max-w-5xl bg-white rounded-3xl shadow-lg p-6 md:p-8 transform transition-transform hover:scale-[1.01] duration-300">
           <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-2xl overflow-hidden mb-6 border-4 border-pink-200">
             <Image
-              src="/jaan-poster.jpg?height=350&width=1000"
+              src={`${prefix}/jaan-poster.jpg?height=350&width=1000`}
               alt="Jaan: Life Movie Poster"
               fill
               className="object-cover"
@@ -59,7 +60,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-pink-100 rounded-3xl p-5 shadow-md transform transition-transform hover:scale-[1.03] duration-300 flex flex-col items-center">
             <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-pink-300 mb-4">
-              <Image src="/ritesh.jpg?height=160&width=160" alt="Ritesh" fill className="object-cover" />
+              <Image src={`${prefix}/ritesh.jpg?height=160&width=160`} alt="Ritesh" fill className="object-cover" />
             </div>
             <h3 className="text-xl font-bold text-pink-600 mb-1">Ritesh</h3>
             <p className="text-gray-600 text-center">Lead Actor, the singer</p>
@@ -67,7 +68,7 @@ export default function Home() {
 
           <div className="bg-purple-100 rounded-3xl p-5 shadow-md transform transition-transform hover:scale-[1.03] duration-300 flex flex-col items-center">
             <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-purple-300 mb-4">
-              <Image src="/rashmi.jpeg?height=160&width=160" alt="Rashmi" fill className="object-cover" />
+              <Image src={`${prefix}/rashmi.jpeg?height=160&width=160`} alt="Rashmi" fill className="object-cover" />
             </div>
             <h3 className="text-xl font-bold text-purple-600 mb-1">Rashmi</h3>
             <p className="text-gray-600 text-center">Lead Actress, the love interest</p>
@@ -115,7 +116,7 @@ export default function Home() {
               className={`bg-${person.color}-50 rounded-3xl p-5 shadow-md transform transition-all hover:scale-[1.05] duration-300 flex flex-col items-center`}
             >
               <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-pink-200 mb-4">
-                <Image src={`/${person.image}`} alt={person.name} fill className="object-cover" />
+                <Image src={`${prefix}/${person.image}`} alt={person.name} fill className="object-cover" />
               </div>
               <h3 className="text-lg font-bold text-pink-600 mb-1 text-center">{person.name}</h3>
               <p className="text-gray-600 text-sm mb-3 text-center">{person.role}</p>
