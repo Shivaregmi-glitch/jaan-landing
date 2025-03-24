@@ -70,7 +70,7 @@ export default function Home() {
             <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-purple-300 mb-4">
               <Image src={`${prefix}/rashmi.jpeg?height=160&width=160`} alt="Rashmi" fill className="object-cover" />
             </div>
-            <h3 className="text-xl font-bold text-purple-600 mb-1">Rashmi</h3>
+            <h3 className="text-xl font-bold text-purple-600 mb-1">Shilpa</h3>
             <p className="text-gray-600 text-center">Lead Actress, the love interest</p>
           </div>
         </div>
